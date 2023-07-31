@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.lpp {
+    text-align: center;
+    width: 80%;
+    border: 4px solid blueviolet;
+    margin:0 auto;
+    border-radius:15px;
+    border-color: brown;
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  .lpp-logo {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .lpp-logo {
+      animation: lpp-logo-spin infinite 10s linear;
+    }
+  }
+  
+  .lpp-header {
+    background-color:blue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color:yellowgreen;
+    
+  }
+
+  p {
+   font-family: 'Times New Roman', Times, serif;
+   color: black; 
+   font-weight: bolder;
+  }
+
+  @keyframes lpp-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
