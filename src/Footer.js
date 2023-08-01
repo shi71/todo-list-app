@@ -1,9 +1,14 @@
-//import React from 'react';
-function Footer() {
+import React from 'react';
+import App from './App';
+
+function Footer(props) {
     return (
-        <footer>
-            <p>© 2023 SAIT RM:NK201 Continuing Education Class</p>
-        </footer>
+        <>
+            <footer>
+                <h2>© 2023 SAIT RM:NK201 Continuing Education Class</h2>
+            </footer>
+
+        </>
     );
 }
 
