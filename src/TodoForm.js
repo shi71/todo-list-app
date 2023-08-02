@@ -1,24 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const TodoForm = ({ onTaskAdded }) => {
-    const onSubmit = (event) => {
-        event.preventDefault();
+const TodoForm = (props) => {
+  const { onTaskAdded } = props;
 
-        onTaskAdded(event.target.task.value);
-    };
+  const onFormSubmitted = (event) => {
+    event.preventDefault();
 
-    return (
-        <>
-            <form onSubmit={onSubmit}>
+    const value = event.target.task.value;
+    
+    onTaskAdded(value);
+  };
 
-                <label>
-                    Task:
-                </label>
-                <input type='text' name='task' />
-                <button type='submit'><strong>Submit</strong></button>
-            </form>
-        </>
-    );
-}
+  return (
+    <form onSubmit={onFormSubmitted}>
+      <input type="text" name="task" id="task" />
+      <button type="submit">Add Task</button>
+    </form>
+  );
+};
 
 export default TodoForm;

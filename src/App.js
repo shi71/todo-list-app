@@ -2,62 +2,35 @@ import React from 'react';
 
 import Header from './Header';
 import Footer from './Footer';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
-
-import logo from './unsplash.jpg';
+import TodoCategory from './TodoCategory';
+import unsplash from './unsplash.jpg';
 
 import './App.css';
 
 const App = () => {
-  const [tasks, setTasks] = React.useState([]);
-
-  const onTaskAddedCallback = (task) => {
-    // Long way:
-    /*const newTasks = tasks;
-
-    newTasks.push(task);
-
-    setTasks(newTasks);*/
-
-    // Short way:
-
-    
 
 
-    setTasks([...tasks, task]);
+  return(
 
-  };
-
-  // Long way:
-  /*const items = [];
-
-  for (const task of tasks) {
-    const item = <li>{task}</li>;
-    items.push(item);
-  }*/
-
-  return (
     <>
-      <Header className='top-header' id='header' title='This is the header'>
-        <h1>Identify and Solve Work & Life Balance 🏃🏃🚵👌</h1>
-        <img src={logo} width={55} height={55} />
-      </Header>
-      <TodoForm onTaskAdded={onTaskAddedCallback} />
-      <TodoList>
-        {/*items*/}
-        {tasks.map((task) => <li>{task}</li>)}
-      </TodoList>
-  
-      <Footer />
+    
+    <Header ClassName='top-header' id='header' title ='This isthe header'>
+      <h1>Identify and Solve Work & Life Balance🚵🏃🏃🚵📖🧘😴👪</h1>
+      <img src={unsplash} className="App-logo"/>
+    </Header>
+    <div class="App1">
+    <TodoCategory title= "Professional Task" />
+    <TodoCategory title= "Personal Task" />
+    <TodoCategory  title= "Health & Fitness" /> 
+    <TodoCategory title= "Learning and Growth" />
+    <TodoCategory title= 'Social & Family' />
+    </div>
+    
+    <Footer />
+    
     </>
   );
-}
-
-export default App;
-
-
-
-
+  }
+  export default App;
 
 
